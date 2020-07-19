@@ -55,6 +55,6 @@ const overrideDefaultOptions = (options) => {
   }
 
   if (options.color != null) {
-    DEFAULT_OPTIONS.numberOfIndicators = options.color;
+    DEFAULT_OPTIONS.color = options.color;
   }
 };
