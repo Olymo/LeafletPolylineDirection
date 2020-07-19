@@ -9,7 +9,7 @@ const createDirectionIndicators = (coordinates, leafletMap, options) => {
   try {
     validateParameters(coordinates, leafletMap, options);
     overrideDefaultOptions(options);
-    createIndicator(coordinates, leafletMap);
+    return createIndicator(coordinates, leafletMap);
   } catch (e) {
     console.error("[x] Validation failed. Error: ", e);
     return [];
