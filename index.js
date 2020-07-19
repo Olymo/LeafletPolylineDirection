@@ -86,7 +86,7 @@ const createIndicator = (coordinates, leafletMap) => {
   return result;
 };
 
-const createLeafletDivIcon = (coordinate) => {
+const createLeafletDivIcon = (coordinates) => {
   return window.L.divIcon({
     className: "direction-indicator",
     bgPos: [5, 5],
