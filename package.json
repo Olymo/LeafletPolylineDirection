@@ -1,4 +1,17 @@
 {
   "name": "@whatsaaaaa/leafletpolylinedirection",
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "description": "Leaflet plug-in to add direction arrows on existing Polylines",
+  "license": "MIT",
+  "repository": "Olymo/LeafletPolylineDirection",
+  "main": "index.js",
+  "keywords": [
+    "leaflet",
+    "vue2-leaflet",
+    "map",
+    "arrows",
+    "polyline",
+    "direction",
+    "js"
+  ]
 }
