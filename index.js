@@ -127,7 +127,7 @@ const getMiddlePoint = (
   if (distance > halfDistance) {
     let ratio = (distance - halfDistance) / distance;
     let result = leafletMap.unproject(
-      new Point(x.x - ratio * (y.x - x.x), y.y - ratio * (y.y - x.y))
+      new Point(y.x - ratio * (y.x - x.x), y.y - ratio * (y.y - x.y))
     );
     return [result.lat, result.lng];
   }
