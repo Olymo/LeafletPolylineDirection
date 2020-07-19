@@ -1,4 +1,4 @@
-const DEFAULT_OPTIONS = {
+let DEFAULT_OPTIONS = {
   numberOfIndicators: 1,
   color: "blue",
 };
@@ -6,6 +6,7 @@ const DEFAULT_OPTIONS = {
 const createDirectionIndicators = (coordinates, leafletMap, options) => {
   try {
     validateParameters(coordinates, leafletMap, options);
+    overrideDefaultOptions(options);
   } catch (e) {
     console.error("[x] Validation failed. Error: ", e);
     return [];
@@ -45,5 +46,15 @@ const validateLeafletMap = (leafletMap) => {
 const validateOptions = (options) => {
   if (options == null) {
     throw new Error("[x] Missing required parameter [options]");
+  }
+};
+
+const overrideDefaultOptions = (options) => {
+  if (options.numberOfIndicators != null) {
+    DEFAULT_OPTIONS.numberOfIndicators = options.numberOfIndicators;
+  }
+
+  if (options.color != null) {
+    DEFAULT_OPTIONS.numberOfIndicators = options.color;
   }
 };
