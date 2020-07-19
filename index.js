@@ -64,7 +64,7 @@ const overrideDefaultOptions = (options) => {
 
 const createIndicator = (coordinates, leafletMap) => {
   for (let i = 1; i < coordinates.length; i++) {
-    let icon = createLeafletDivIcon(coordinates[i]);
+    let icon = createLeafletDivIcon(coordinates[i], coordinates[i - 1]);
 
     for (let n = 1; n <= DEFAULT_OPTIONS.numberOfIndicators; n++) {
       result.push(
@@ -86,7 +86,7 @@ const createIndicator = (coordinates, leafletMap) => {
   return result;
 };
 
-const createLeafletDivIcon = (coordinates) => {
+const createLeafletDivIcon = (coordinates, previouseCoordinates) => {
   return window.L.divIcon({
     className: "direction-indicator",
     bgPos: [5, 5],
@@ -94,8 +94,8 @@ const createLeafletDivIcon = (coordinates) => {
       <div style="color: ${
         DEFAULT_OPTIONS.color
       }; transform: rotate(${calculateIndicatorAngle(
-      coordinates[i - 1],
-      coordinates[i],
+      previouseCoordinates,
+      coordinates,
       -1
     )});">▶</div>
     `,
