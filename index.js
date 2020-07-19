@@ -97,7 +97,7 @@ const createLeafletDivIcon = (coordinates, previouseCoordinates) => {
       previouseCoordinates,
       coordinates,
       -1
-    )});">▶</div>
+    ).toString()}deg)">▶</div>
     `,
   });
 };
