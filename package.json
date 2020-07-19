@@ -1,6 +1,6 @@
 {
   "name": "@whatsaaaaa/leafletpolylinedirection",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Leaflet plug-in to add direction arrows on existing Polylines",
   "license": "MIT",
   "repository": "Olymo/LeafletPolylineDirection",
